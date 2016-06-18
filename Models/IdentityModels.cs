@@ -13,5 +13,7 @@ namespace MVC5Demo.Models
             : base("DefaultConnection")
         {
         }
+
+        public System.Data.Entity.DbSet<MVC5Demo.Models.Product> Products { get; set; }
     }
 }
