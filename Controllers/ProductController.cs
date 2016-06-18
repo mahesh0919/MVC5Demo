@@ -22,6 +22,7 @@ namespace MVC5Demo.Controllers
         }
 
         // GET: /Product/Details/5
+        [Route("ProductsDetails-{id}")]
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
