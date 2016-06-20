@@ -8,14 +8,17 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MVC5Demo.Models;
+using MVC5Demo.FilterOverride;
 
 namespace MVC5Demo.Controllers
 {
+    [Authorize]
     public class ProductController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: /Product/
+        [FilterOverridde]
         public async Task<ActionResult> Index()
         {
             return View(await db.Products.ToListAsync());

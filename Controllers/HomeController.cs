@@ -20,7 +20,7 @@ namespace MVC5Demo.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult MVC5Demo()
         {
             ViewBag.Message = "Your contact page.";
 
